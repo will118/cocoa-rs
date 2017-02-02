@@ -10,15 +10,18 @@
 
 @implementation WBWindow
 
--(id)init {
-  if (self = [super init]) {
+-(id) initWithContentRect:(NSRect)contentRect
+                styleMask:(NSWindowStyleMask)style
+                  backing:(NSBackingStoreType)bufferingType
+                    defer:(BOOL)flag {
+  if (self = [super initWithContentRect:contentRect styleMask:style backing:bufferingType defer:flag]) {
     [self setHasShadow:NO];
     [self setStyleMask:NSWindowStyleMaskBorderless | NSWindowStyleMaskResizable];
   }
   return self;
 }
 
--(BOOL)canBecomeKeyWindow {
+-(BOOL) canBecomeKeyWindow {
     return YES;
 }
 
