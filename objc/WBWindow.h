@@ -6,8 +6,7 @@
 //  Copyright © 2017 Will Bartlett. All rights reserved.
 //
 
-@import Foundation;
-@import AppKit;
+#import <AppKit/AppKit.h>
 
 @interface WBWindow : NSWindow
 @end

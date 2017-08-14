@@ -11,13 +11,18 @@
 @implementation WBWindow
 
 -(id) initWithContentRect:(NSRect)contentRect
-                styleMask:(NSWindowStyleMask)style
+                styleMask:(NSUInteger)style
                   backing:(NSBackingStoreType)bufferingType
                     defer:(BOOL)flag {
-  if (self = [super initWithContentRect:contentRect styleMask:style backing:bufferingType defer:flag]) {
+
+  if (self = [super initWithContentRect:contentRect
+                              styleMask:style
+                                backing:bufferingType
+                                  defer:flag]) {
     [self setHasShadow:NO];
-    [self setStyleMask:NSWindowStyleMaskBorderless | NSWindowStyleMaskResizable];
+    [self setStyleMask:NSBorderlessWindowMask | NSResizableWindowMask];
   }
+
   return self;
 }
 
